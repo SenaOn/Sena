@@ -1,10 +1,12 @@
+require 'patient_decorator'
+
 class PatientsController < ApplicationController
   before_action :set_patient, only: [:show, :edit, :update, :destroy]
 
   # GET /patients
   # GET /patients.json
   def index
-    @patients = Patient.all
+    @patient = Patient.all
   end
 
   # GET /patients/1
@@ -25,6 +27,11 @@ class PatientsController < ApplicationController
   # POST /patients.json
   def create
     @patient = Patient.new(patient_params)
+    @patient.name = params[:patient][:name]
+    @patient.dateofbirth = params[:patient][:dateofbirth]
+    @patient.address = params[:patient][:address]
+    @patient.infection = params[:patient][:infection]
+
 
     respond_to do |format|
       if @patient.save
