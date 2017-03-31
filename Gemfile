@@ -45,3 +45,12 @@ group :development do
   gem 'spring'
 end
 
+#Heroku uses Heroku POstgres DB based on PostgresSQL
+group :production do
+   gem 'pg'
+   gem 'rails_12factor'
+end
+
+group :development, :test do
+   gem 'splite3'
+end
