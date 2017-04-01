@@ -5,10 +5,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
 
-group :development, :test do
-  gem 'sqlite3'
-end
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -51,7 +47,12 @@ end
 
 #Heroku uses Heroku POstgres DB based on PostgresSQL
 
+group :development, :test do
+   gem 'sqlite3'
+end
+
+
 group :production do
-   gem 'pg', '0.17.1'
-   gem 'rails_12factor', '0.0.2'
+   gem 'pg',               '0.17.1'
+   gem 'rails_12factor',   '0.0.2'
 end
