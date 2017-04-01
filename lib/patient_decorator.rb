@@ -1,42 +1,42 @@
 # the concrete component we would like to decorate, a car in our example
 
-class Patient
+#class Patient
 
-    def initialize(n, d, i)
+   # def initialize(n, d, i)
 
-        @name = n
+       # @name = n
 
-        @dateofbirth = d 
+       # @dateofbirth = d 
 
-        @infection = i
+        #@infection = i
 
-        @description = "Patients details"
+        #@description = "Patients details"
 
-    end
+    #end
 
     # getter method
 
-    def name 
+   # def name 
 
-        return @name
+       #return @name
 
-    end
+   # end
 
     # a method which returns a string representation of the object of type BasicCar
 
-    def details
+    #def details
 
-        return @description + "; " + @name + "; " + @dateofbirth + ": " + "#{@infection}"
+       # return @description + "; " + @name + "; " + @dateofbirth + ": " + "#{@infection}"
 
-    end
+   # end
 
     # getter method
 
-    def name
+    #def name
 
-        return @name
+        #return @name
 
-    end
+    #end
 
     # getter method
 
@@ -53,23 +53,23 @@ end # ends the Patient class
 
 # the base/super class decorator (i.e. no actual decoration yet), each concrete decorator (i.e. subclass) will add its own decoration
 
-class PatientDecorator < Patient
+#class PatientDecorator < Patient
 
-    def initialize(patient)
+   # def initialize(patient)
 
         #patient is a real patient, i.e. the component we want to decorate
 
-        @patient = patient
+       # @patient = patient
 
-        super(@patient.name, @patient.dateofbirth, @patient.infection)
+        #super(@patient.name, @patient.dateofbirth, @patient.infection)
 
-        @extra_infection = 0
+        #@extra_infection = 0
 
-        @description = "no extra infection"
+        #@description = "no extra infection"
 
-    end
+    #end
     
 
-end # ends the PatientDecorator class
+#end # ends the PatientDecorator class
 
 

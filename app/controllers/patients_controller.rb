@@ -1,4 +1,4 @@
-require 'patient_decorator'
+#require 'patient_decorator'
 
 class PatientsController < ApplicationController
   before_action :set_patient, only: [:show, :edit, :update, :destroy]
